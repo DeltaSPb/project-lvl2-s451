@@ -18,3 +18,7 @@ $ npm i -g gendiff_ds
 ### Difference between .json files:
 
 [![asciicast](https://asciinema.org/a/dJGdSlXEOPu5v1jQ2UwKLDT7f.png)](https://asciinema.org/a/dJGdSlXEOPu5v1jQ2UwKLDT7f)
+
+### Difference between .yaml files:
+
+[![asciicast](https://asciinema.org/a/OT3AgWAf1gegeyuZwFj2IlId4.png)](https://asciinema.org/a/OT3AgWAf1gegeyuZwFj2IlId4)
