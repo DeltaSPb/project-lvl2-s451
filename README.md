@@ -10,3 +10,6 @@ $ npm i -g gendiff_ds
 
 ```
 
+### Help:
+
+[![asciicast](https://asciinema.org/a/mYPeyhtlKYtSs0X3wHkYSh3Ow.png)](https://asciinema.org/a/mYPeyhtlKYtSs0X3wHkYSh3Ow)
