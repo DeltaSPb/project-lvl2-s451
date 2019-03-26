@@ -3,24 +3,24 @@ import _ from 'lodash';
 const existence = [
   {
     check: (key, obj1, obj2) => _.isObject(obj1[key]) && _.isObject(obj2[key]),
-    difference: (key, obj1, obj2, fn) => ({ state: 'nasted', key, children: fn(obj1[key], obj2[key]) }),
+    difference: (key, obj1, obj2, fn) => ({ type: 'nested', key, children: fn(obj1[key], obj2[key]) }),
   },
   {
     check: (key, obj1) => !_.has(obj1, key),
-    difference: (key, obj1, obj2) => ({ state: 'added', key, value: obj2[key] }),
+    difference: (key, obj1, obj2) => ({ type: 'added', key, value: obj2[key] }),
   },
   {
     check: (key, obj1, obj2) => !_.has(obj2, key),
-    difference: (key, obj1) => ({ state: 'removed', key, value: obj1[key] }),
+    difference: (key, obj1) => ({ type: 'removed', key, value: obj1[key] }),
   },
   {
     check: (key, obj1, obj2) => obj1[key] === obj2[key],
-    difference: (key, obj1) => ({ state: 'unchanged', key, value: obj1[key] }),
+    difference: (key, obj1) => ({ type: 'unchanged', key, value: obj1[key] }),
   },
   {
     check: (key, obj1, obj2) => obj1[key] !== obj2[key],
     difference: (key, obj1, obj2) => ({
-      state: 'changed', key, oldValue: obj1[key], newValue: obj2[key],
+      type: 'changed', key, oldValue: obj1[key], newValue: obj2[key],
     }),
   },
 ];

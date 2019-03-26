@@ -14,8 +14,8 @@ const sringify = (value, depth) => {
 };
 
 
-const stateAction = {
-  nasted: ({ key, children }, depth, render) => `${space(depth + 1)}${key}: ${render(children, depth + 1)}`,
+const typeAction = {
+  nested: ({ key, children }, depth, render) => `${space(depth + 1)}${key}: ${render(children, depth + 1)}`,
   unchanged: ({ key, value }, depth) => `${space(depth)}  ${key}: ${sringify(value, depth)}`,
   added: ({ key, value }, depth) => `${space(depth)}+ ${key}: ${sringify(value, depth)}`,
   removed: ({ key, value }, depth) => `${space(depth)}- ${key}: ${sringify(value, depth)}`,
@@ -24,8 +24,8 @@ const stateAction = {
 
 const render = (ast, level = 1) => {
   const iter = (tree, depth) => tree.map((node) => {
-    const { state, ...args } = node;
-    return stateAction[state](args, depth, render);
+    const { type, ...args } = node;
+    return typeAction[type](args, depth, render);
   });
   return zip(iter(ast, level).join('\n'), level - 1);
 };
