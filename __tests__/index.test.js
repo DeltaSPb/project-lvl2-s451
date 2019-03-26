@@ -5,6 +5,7 @@ import genDiff from '../src';
 const filesArr = [
   ['before.json', 'after.json'],
   ['before.yaml', 'after.yaml'],
+  ['before.ini', 'after.ini'],
 ];
 
 test.each(filesArr)('genDiff(%s, %s)', (fileBefore, fileAfter) => {
