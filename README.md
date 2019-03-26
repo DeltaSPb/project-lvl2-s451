@@ -22,3 +22,7 @@ $ npm i -g gendiff_ds
 ### Difference between .yaml files:
 
 [![asciicast](https://asciinema.org/a/OT3AgWAf1gegeyuZwFj2IlId4.png)](https://asciinema.org/a/OT3AgWAf1gegeyuZwFj2IlId4)
+
+### Difference between .ini files:
+
+[![asciicast](https://asciinema.org/a/9Gbgty7LWD3k9eqHAdpfTIkRc.png)](https://asciinema.org/a/9Gbgty7LWD3k9eqHAdpfTIkRc)
