@@ -17,12 +17,12 @@ $ npm i -g gendiff_ds
 
 ### Difference between .json files:
 
-[![asciicast](https://asciinema.org/a/dJGdSlXEOPu5v1jQ2UwKLDT7f.png)](https://asciinema.org/a/dJGdSlXEOPu5v1jQ2UwKLDT7f)
-
-### Difference between .yaml files:
-
-[![asciicast](https://asciinema.org/a/OT3AgWAf1gegeyuZwFj2IlId4.png)](https://asciinema.org/a/OT3AgWAf1gegeyuZwFj2IlId4)
+[![asciicast](https://asciinema.org/a/nKxeoyGTnYsi92K36BIf4ajrb.png)](https://asciinema.org/a/nKxeoyGTnYsi92K36BIf4ajrb)
 
 ### Difference between .ini files:
 
-[![asciicast](https://asciinema.org/a/9Gbgty7LWD3k9eqHAdpfTIkRc.png)](https://asciinema.org/a/9Gbgty7LWD3k9eqHAdpfTIkRc)
+[![asciicast](https://asciinema.org/a/eBnQ6nPmkFemYp6TzRCFmOO6x.png)](https://asciinema.org/a/eBnQ6nPmkFemYp6TzRCFmOO6x)
+
+### Difference between .yaml files:
+
+[![asciicast](https://asciinema.org/a/mDOxUcUNoY2ecmbgbQlyF51Pn.png)](https://asciinema.org/a/mDOxUcUNoY2ecmbgbQlyF51Pn)
