@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import parse from './parsers';
-import render from './renders/render';
+import render from './renderers';
 import buildAst from './buildAst';
 
 
