@@ -6,7 +6,7 @@ start:
 
 	npx babel-node -- src/bin/gendiff.js
 
-build: 
+build:
 
 	rm -rf dist
 	npm run build
@@ -20,9 +20,9 @@ lint:
 	npx eslint .
 
 test:
-	
+
 	npm test
 
-test-watch:
+watch:
 
-	npm test --watchAll
+	npm run watch
