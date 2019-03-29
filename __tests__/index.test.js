@@ -11,7 +11,7 @@ const filesArr = [
   ['before.ini', 'after.ini', 'plain', 'resultPlain.txt'],
 ];
 
-test.each(filesArr)('genDiff(%s, %s)', (fileBefore, fileAfter, format, result) => {
+test.each(filesArr)('genDiff(%s, %s, %s)', (fileBefore, fileAfter, format, result) => {
   const pathToBeforeFile = path.resolve(__dirname, `__fixtures__/${fileBefore}`);
   const pathToAfterFile = path.resolve(__dirname, `__fixtures__/${fileAfter}`);
   const pathToResult = path.resolve(__dirname, `__fixtures__/${result}`);
