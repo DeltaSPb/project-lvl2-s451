@@ -1,21 +1,21 @@
 import _ from 'lodash';
 
 const sringify = value => (_.isObject(value) ? '[complex value]' : `'${value}'`);
-const pathToRoor = (path, key) => [...path.split(), key].filter(k => k).join('.');
 
 const typeAction = {
-  nested: ({ key, children }, path, iter) => iter(children, pathToRoor(path, key)),
-  added: ({ key, value }, path) => `Property '${pathToRoor(path, key)}' was added with value: ${sringify(value)}`,
-  removed: ({ key }, path) => `Property '${pathToRoor(path, key)}' was removed`,
-  changed: ({ key, oldValue, newValue }, path) => `Property '${pathToRoor(path, key)}' was updated. From ${sringify(oldValue)} to ${sringify(newValue)}`,
+  nested: (path, { children }, iter) => iter(children, `${path}.`),
+  added: (path, { value }) => `Property '${path}' was added with value: ${sringify(value)}`,
+  removed: path => `Property '${path}' was removed`,
+  changed: (path, { oldValue, newValue }) => `Property '${path}' was updated. From ${sringify(oldValue)} to ${sringify(newValue)}`,
 };
 
 const render = (ast) => {
   const iter = (node, path) => node
     .filter(current => current.type !== 'unchanged')
     .map((current) => {
+      const newPath = `${path}${current.key}`;
       const { type, ...args } = current;
-      return typeAction[type](args, path, iter);
+      return typeAction[type](newPath, args, iter);
     });
   return _.flattenDeep(iter(ast, '')).join('\n');
 };
