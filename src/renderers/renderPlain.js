@@ -1,7 +1,7 @@
 import _ from 'lodash';
 
 const sringify = value => (_.isObject(value) ? '[complex value]' : `'${value}'`);
-const pathToRoor = (path, key) => [...path, key].join('.').split(' ');
+const pathToRoor = (path, key) => [...path.split(), key].filter(k => k).join('.');
 
 const typeAction = {
   nested: ({ key, children }, path, iter) => iter(children, pathToRoor(path, key)),
